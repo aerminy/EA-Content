@@ -6,91 +6,46 @@ import { Switch } from "./ui/switch";
 import { Checkbox } from "./ui/checkbox";
 
 const sampleIdeas = [
-  {
-    day: "Monday",
-    type: "Instagram Reel",
-    title: "3 Signs You're Overtrading",
-    script: "Are you making too many trades per day? Here's how to tell...",
-    caption: "Less is more. Focus on quality setups. #TradingTips #Discipline",
-    youtube: "Expand this topic into a 5-min video: include chart examples and journal tips."
-  },
-  {
-    day: "Tuesday",
-    type: "Instagram Reel",
-    title: "How to Set a TP That Actually Gets Hit",
-    script: "Most traders set TPs based on dreams. Here's how to use market structure...",
-    caption: "TPs that hit are TPs that make sense. Structure matters. #TakeProfit #SmartTrading",
-    youtube: "Break this into a video tutorial with step-by-step trade review."
-  },
-  {
-    day: "Wednesday",
-    type: "Skits",
-    title: "Trader Seeing Price Hit TP by 0.01 and Reverse",
-    script: "Dramatic reenactment — trader cheers, then watches price pull back 99%.",
-    caption: "Every trader has felt this pain 😭 #tradinghumor #relatable",
-    youtube: "Skit series idea: 'Trader Life' — Episode 1."
-  },
-  {
-    day: "Thursday",
-    type: "Instagram Reel",
-    title: "Why Most Traders Lose Money",
-    script: "Here's the number one mindset mistake every beginner makes...",
-    caption: "Fix the mindset, fix the account. #MindsetMatters #TradingJourney",
-    youtube: "Full 10-minute deep dive into trading psychology."
-  },
-  {
-    day: "Friday",
-    type: "Instagram Reel",
-    title: "The 2 Candle Rule You Shouldn't Break",
-    script: "If these two candles form back-to-back, step away from the trade...",
-    caption: "Don't force it. Let the chart talk. #PriceAction #SmartEntries",
-    youtube: "Show 3 examples of this in real market conditions."
-  },
-  {
-    day: "Saturday",
-    type: "YouTube Short",
-    title: "Biggest Mistake in Risk Management",
-    script: "Let me show you why a $100 loss shouldn't break your account...",
-    caption: "Risk small, trade long. #RiskManagement",
-    youtube: "Turn this into a risk vs reward breakdown on the whiteboard."
-  },
-  {
-    day: "Sunday",
-    type: "Skits",
-    title: "When You Switch From Demo to Real Money",
-    script: "Trader enters trade calmly on demo. Switches to real and starts sweating bullets.",
-    caption: "Demo and real are two different sports 😂 #TraderLife #Skits",
-    youtube: "Skit idea: 'The Mental Shift in Trading' with dramatic music."
-  },
-  {
-    day: "Monday",
-    type: "Instagram Reel",
-    title: "This Indicator is Lying to You",
-    script: "Why RSI overbought doesn't always mean reversal...",
-    caption: "RSI + context = accuracy. Don't use it alone. #Indicators #TradingTips",
-    youtube: "Compare RSI fakeouts on 3 different timeframes."
-  },
-  {
-    day: "Tuesday",
-    type: "Instagram Reel",
-    title: "Stop Chasing Green Candles",
-    script: "It feels good... until it reverses. Here's what to do instead.",
-    caption: "Confirmation > FOMO. #Discipline #EntryTips",
-    youtube: "Expand this into a trade breakdown with entries and exits."
-  },
-  {
-    day: "Wednesday",
-    type: "Skits",
-    title: "When You Open Your Phone After a Swing Trade",
-    script: "You either feel like a genius or need therapy 😂",
-    caption: "Every swing trader knows this. #relatable #traderhumor",
-    youtube: "Skit compilation idea: ‘Swing Trade Emotions Day 1–5’"
-  },
-  // 🔁 Repeat up to 30+ with new variations
+  { day: "Monday", type: "Reel", title: "How to Read Price Action Like a Pro", script: "Learn to understand candlestick behavior in trending vs ranging markets.", caption: "Price action is king 👑 #PriceAction #Forex", youtube: "Go deeper into structure breaks and reaction zones." },
+  { day: "Tuesday", type: "Skit", title: "Trader After News Drop", script: "Me: I'll avoid news. Also me: trades NFP blindly.", caption: "We've all been there 😂 #traderhumor", youtube: "Create a 3-part skit on news trader personalities." },
+  { day: "Wednesday", type: "Reel", title: "Why You Keep Getting Stopped Out", script: "It’s not your SL, it’s your entry timing.", caption: "Timing > size. Let the market come to you. #SmartStops", youtube: "Demo different SL placements live on charts." },
+  { day: "Thursday", type: "Reel", title: "How to Catch Breakouts Without FOMO", script: "Use a pending order strategy instead of chasing.", caption: "Chase less, win more 💡 #BreakoutTrading", youtube: "Build out this strategy from a live example." },
+  { day: "Friday", type: "Skit", title: "The Trader Who Enters Before Confirmation", script: "‘I know it’ll go up now.’ — Market dumps 5 minutes later.", caption: "Patience saves accounts 💀 #FOMOtrader", youtube: "Dramatize 3 classic FOMO trade entries." },
+  { day: "Saturday", type: "Reel", title: "The Truth About Risk to Reward Ratios", script: "Most people look for 3R. But what matters more is win rate + RR.", caption: "Do the math. Know your edge. #RiskReward", youtube: "Explain how to find your break-even win rate." },
+  { day: "Sunday", type: "YouTube", title: "Weekly Market Prep (Live)", script: "Here’s what I’m looking at going into the week.", caption: "Get ready for the markets 🧠 #SundayPrep", youtube: "Full 10-min forecast + trading ideas." },
+
+  { day: "Monday", type: "Reel", title: "The Best Time to Trade NY Open", script: "Here’s the 1-hour window I look at most.", caption: "Timing = everything. #NYSession", youtube: "Trade review with timestamps and volatility zones." },
+  { day: "Tuesday", type: "Skit", title: "Trader Refreshing MetaTrader Every 3 Seconds", script: "No patience. No chill. Just anxiety.", caption: "We all know that one friend 😅 #ChartRefresh", youtube: "Behind-the-scenes comedy skit on overmonitoring." },
+  { day: "Wednesday", type: "Reel", title: "Are Indicators Worthless?", script: "Not if you use them as confirmation—not signals.", caption: "Tools, not crutches. #IndicatorTruth", youtube: "Compare 3 trades: raw price vs indicator-based." },
+  { day: "Thursday", type: "Reel", title: "How I Journal My Trades (Template)", script: "Here’s the format that changed my trading.", caption: "Journaling = growth. #TradeJournal", youtube: "Full journal walk-through using Notion." },
+  { day: "Friday", type: "Skit", title: "That Trader Who Blames the Market for Everything", script: "‘The market's manipulated.’ Sure, bro.", caption: "It’s never your fault 😭 #BlameGame", youtube: "Sketch: the 5 types of delusional traders." },
+  { day: "Saturday", type: "Reel", title: "The Power of Waiting for the Retest", script: "Don’t enter on breakout—wait for the pullback.", caption: "Let price prove itself. #SmartEntry", youtube: "Chart tutorial: breakout, retest, confirmation." },
+  { day: "Sunday", type: "YouTube", title: "Weekly Recap + Community Trade Review", script: "Let’s learn from what worked... and what didn’t.", caption: "Improve every week 💪 #TradeReview", youtube: "Replay trades + shout out community wins." },
+
+  { day: "Monday", type: "Reel", title: "Why You Need a Trading Routine", script: "Structure builds consistency and reduces FOMO.", caption: "Systems > Emotion. #TraderRoutine", youtube: "Day-in-the-life of a prepared trader." },
+  { day: "Tuesday", type: "Skit", title: "Trader When Price Hits SL by 0.1 Pip", script: "*violently throws mouse*
+Me: ‘That was planned.’",
+    caption: "Too real 😤 #SLPain", youtube: "Skit series: small losses that ruin your day." },
+  { day: "Wednesday", type: "Reel", title: "The 3 Types of Market Structure You Must Know", script: "Consolidation, Expansion, Reversal.", caption: "Read the market. Trade smarter. #Structure", youtube: "Overlay chart examples of each structure type." },
+  { day: "Thursday", type: "Reel", title: "When to Walk Away From the Charts", script: "Overtrading kills profits. Here’s my 3-rule system.", caption: "Trade less, keep more. #NoChasing", youtube: "Discussion: trader psychology & burnout." },
+  { day: "Friday", type: "Skit", title: "When You're 1 Trade Away From Funded...", script: "Me: ‘Just one more.’ — Market: 💥",
+    caption: "Funded pain is real 🥲 #propfirmlife", youtube: "Mini short film: 'The Final Trade'." },
+  { day: "Saturday", type: "Reel", title: "How to Use Session Times to Your Advantage", script: "Tokyo = low volatility, NY = aggressive breakouts.", caption: "Know your session. Know your edge. #ForexSessions", youtube: "Chart overlay with session examples and tips." },
+  { day: "Sunday", type: "YouTube", title: "Trader Q&A: Live Advice Session", script: "Answering your DMs and questions on setup selection.", caption: "Let’s grow together. #AskMeAnything", youtube: "Livestream: reply to 10 community DMs with chart reviews." },
+
+  { day: "Monday", type: "Reel", title: "What Trading Has Taught Me About Life", script: "Discipline, patience, and taking losses with grace.", caption: "Trading = life coach in disguise. #LifeLessons", youtube: "Podcast-style breakdown with real experiences." },
+  { day: "Tuesday", type: "Skit", title: "When You Try to Trade While on Vacation", script: "Laptop in the sand. Wi-Fi drops mid-trade.", caption: "Just don’t 😂 #VacationTradingFail", youtube: "Skit: trading vs vacationing expectations vs reality." },
+  { day: "Wednesday", type: "Reel", title: "One Mindset Shift That Made Me Profitable", script: "Stop trying to be right. Start managing risk.", caption: "Mindset > predictions. #TradingShift", youtube: "Whiteboard breakdown of expectations vs planning." },
+  { day: "Thursday", type: "Reel", title: "How to Trade Ranges Without Getting Burned", script: "Here’s where most breakout traps happen.", caption: "Wait for the edge. Don’t force the move. #RangeTrap", youtube: "Chart side-by-side: breakouts vs fakeouts." },
+  { day: "Friday", type: "Skit", title: "When Price Misses Your TP by 1 Pip", script: "Me: 'Close enough?' — Market: reverses hard.", caption: "Every trader's trauma 😭 #TPFail", youtube: "Sketch: The Almost TP Series - Ep.1" },
+  { day: "Saturday", type: "Reel", title: "The 80/20 Rule of Trading", script: "80% of results come from 20% of setups.", caption: "Focus on your A+ setups. #ParetoPrinciple", youtube: "Demo: how I filter 5 good trades from 20 meh ones." },
+  { day: "Sunday", type: "YouTube", title: "Monthly Goals + Trading Mindset Reset", script: "Here’s how I plan, journal, and reset monthly.", caption: "New month, new level. #MonthlyPrep", youtube: "30-minute strategy reflection & goal setting session." }
 ];
 
+const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
 const WeeklyContentPlanner = () => {
-  const [ideas, setIdeas] = useState(sampleIdeas);
+  const [ideas, setIdeas] = useState([]);
   const [showYouTube, setShowYouTube] = useState(false);
   const [usedIdeas, setUsedIdeas] = useState({});
   const [ratings, setRatings] = useState({});
@@ -112,7 +67,22 @@ const WeeklyContentPlanner = () => {
 
   const shuffleIdeas = () => {
     const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
-    setIdeas(shuffled);
+    const selected = [];
+    const usedDays = new Set();
+
+    for (let idea of shuffled) {
+      if (!usedDays.has(idea.day) && selected.length < 7) {
+        usedDays.add(idea.day);
+        selected.push(idea);
+      }
+    }
+
+    // Sort selected 7 by real weekday order
+    const sorted = selected.sort(
+      (a, b) => dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day)
+    );
+
+    setIdeas(sorted);
     setUsedIdeas({});
     setRatings({});
   };
@@ -150,7 +120,7 @@ const WeeklyContentPlanner = () => {
                     />
                     Used
                   </label>
-                  <button onClick={() => rateIdea(index, "good" )} title="Mark as good">
+                  <button onClick={() => rateIdea(index, "good")} title="Mark as good">
                     ✅
                   </button>
                   <button onClick={() => rateIdea(index, "bad")} title="Mark as bad">
