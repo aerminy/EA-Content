@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
@@ -9,7 +10,7 @@ const sampleIdeas = [
     day: "Tuesday",
     type: "Skit",
     title: "Trader When Price Hits SL by 0.1 Pip",
-    script: "*violently throws mouse*\\nMe: 'That was planned.'",
+    script: "*violently throws mouse*\nMe: 'That was planned.'",
     caption: "Too real 😤 #SLPain",
     youtube: "Skit series: small losses that ruin your day."
   }
@@ -126,4 +127,3 @@ const WeeklyContentPlanner = () => {
 };
 
 export default WeeklyContentPlanner;
-
