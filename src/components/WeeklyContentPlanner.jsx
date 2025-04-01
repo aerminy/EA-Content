@@ -23,8 +23,8 @@ const sampleIdeas = [
   { day: "Sunday", type: "YouTube", title: "Weekly Recap + Community Trade Review", script: "Let’s learn from what worked... and what didn’t.", caption: "Improve every week 💪 #TradeReview", youtube: "Replay trades + shout out community wins." },
 
   { day: "Monday", type: "Reel", title: "Why You Need a Trading Routine", script: "Structure builds consistency and reduces FOMO.", caption: "Systems > Emotion. #TraderRoutine", youtube: "Day-in-the-life of a prepared trader." },
-  { day: "Tuesday", type: "Skit", title: "Trader When Price Hits SL by 0.1 Pip", script: "*violently throws mouse*
-Me: ‘That was planned.’",
+  { day: "Tuesday", type: "Skit", title: "Trader When Price Hits SL by 0.1 Pip", script: "*violently throws mouse*\nMe: ‘That was planned.’",
+
     caption: "Too real 😤 #SLPain", youtube: "Skit series: small losses that ruin your day." },
   { day: "Wednesday", type: "Reel", title: "The 3 Types of Market Structure You Must Know", script: "Consolidation, Expansion, Reversal.", caption: "Read the market. Trade smarter. #Structure", youtube: "Overlay chart examples of each structure type." },
   { day: "Thursday", type: "Reel", title: "When to Walk Away From the Charts", script: "Overtrading kills profits. Here’s my 3-rule system.", caption: "Trade less, keep more. #NoChasing", youtube: "Discussion: trader psychology & burnout." },
