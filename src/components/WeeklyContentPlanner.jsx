@@ -1,12 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Switch } from "./ui/switch";
 import { Checkbox } from "./ui/checkbox";
-import html2pdf from "html2pdf.js";
 
 const sampleIdeas = [
-  { day: "Monday", type: "Reel", title: "Best Risk Management Hack", script: "How I size my positions based on volatility.", caption: "Control your risk. Scale your edge. #RiskGame", youtube: "Live breakdown of a trade using volatility-based sizing." },
+    { day: "Monday", type: "Reel", title: "Best Risk Management Hack", script: "How I size my positions based on volatility.", caption: "Control your risk. Scale your edge. #RiskGame", youtube: "Live breakdown of a trade using volatility-based sizing." },
   { day: "Tuesday", type: "Skit", title: "Trader's Reaction to CPI News", script: "Market spikes. Me: ‘Why didn't I wait?’", caption: "CPI strikes again 💥 #NewsMoves", youtube: "Skit series: trading around high-impact events." },
   { day: "Wednesday", type: "Reel", title: "How to Build a Watchlist in 5 Min", script: "Find 3 clean setups by filtering junk charts.", caption: "Speed + precision = profits. #WatchlistFlow", youtube: "Live scan of 10 pairs into 3 setups." },
   { day: "Thursday", type: "Reel", title: "My Morning Trading Routine", script: "Coffee. Meditation. Chart scan. Execute.", caption: "Mindset + Prep = Consistency ☕🧠", youtube: "Walk through full pre-market prep live." },
@@ -43,14 +42,12 @@ const WeeklyContentPlanner = () => {
   const [showYouTube, setShowYouTube] = useState(false);
   const [usedIdeas, setUsedIdeas] = useState({});
   const [ratings, setRatings] = useState({});
-  const plannerRef = useRef();
 
   useEffect(() => {
     const storedUsed = localStorage.getItem("usedIdeas");
     const storedRatings = localStorage.getItem("ratings");
     if (storedUsed) setUsedIdeas(JSON.parse(storedUsed));
     if (storedRatings) setRatings(JSON.parse(storedRatings));
-    shuffleIdeas();
   }, []);
 
   useEffect(() => {
@@ -90,20 +87,11 @@ const WeeklyContentPlanner = () => {
     setRatings({ ...ratings, [index]: value });
   };
 
-  const downloadPDF = () => {
-    const element = plannerRef.current;
-    html2pdf().from(element).save("EA-Weekly-Content.pdf");
-  };
-
   return (
-    <div
-      ref={plannerRef}
-      className="min-h-screen bg-gradient-to-br from-gray-100 via-white to-gray-200 p-4 space-y-4"
-    >
+    <div className="p-4 space-y-4">
       <h1 className="text-2xl font-bold">📆 EA Content Planner</h1>
-      <div className="flex flex-wrap gap-4 items-center">
+      <div className="flex items-center gap-4">
         <Button onClick={shuffleIdeas}>🔄 Generate New Week</Button>
-        <Button onClick={downloadPDF}>📥 Download as PDF</Button>
         <div className="flex items-center gap-2">
           <span>🎥 Show YouTube Ideas</span>
           <Switch checked={showYouTube} onCheckedChange={setShowYouTube} />
