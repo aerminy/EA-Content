@@ -6,14 +6,35 @@ import { Switch } from "./ui/switch";
 import { Checkbox } from "./ui/checkbox";
 
 const sampleIdeas = [
-  {
-    day: "Tuesday",
-    type: "Skit",
-    title: "Trader When Price Hits SL by 0.1 Pip",
-    script: "*violently throws mouse*\nMe: 'That was planned.'",
-    caption: "Too real 😤 #SLPain",
-    youtube: "Skit series: small losses that ruin your day."
-  }
+  { day: "Monday", type: "Reel", title: "Best Risk Management Hack", script: "How I size my positions based on volatility.", caption: "Control your risk. Scale your edge. #RiskGame", youtube: "Live breakdown of a trade using volatility-based sizing." },
+  { day: "Tuesday", type: "Skit", title: "Trader's Reaction to CPI News", script: "Market spikes. Me: ‘Why didn't I wait?’", caption: "CPI strikes again 💥 #NewsMoves", youtube: "Skit series: trading around high-impact events." },
+  { day: "Wednesday", type: "Reel", title: "How to Build a Watchlist in 5 Min", script: "Find 3 clean setups by filtering junk charts.", caption: "Speed + precision = profits. #WatchlistFlow", youtube: "Live scan of 10 pairs into 3 setups." },
+  { day: "Thursday", type: "Reel", title: "My Morning Trading Routine", script: "Coffee. Meditation. Chart scan. Execute.", caption: "Mindset + Prep = Consistency ☕🧠", youtube: "Walk through full pre-market prep live." },
+  { day: "Friday", type: "Skit", title: "When a Funded Challenge Goes Wrong", script: "Me: Just one more win. Market: LOL.", caption: "RIP to all my evaluations 💀 #PropPain", youtube: "Skit: funding fails and what we learn." },
+  { day: "Saturday", type: "Reel", title: "What Is Smart Money?", script: "SMC isn’t magic — it’s structure + patience.", caption: "Forget the hype. Focus on logic. #SmartMoneyConcepts", youtube: "Break down a clean SMC trade example." },
+  { day: "Sunday", type: "YouTube", title: "Trading Q&A With My Students", script: "Answering the most common beginner mistakes.", caption: "Grow as a group 📈 #CommunityTrading", youtube: "Live Q&A replay with timestamps." },
+  { day: "Monday", type: "Reel", title: "Why Most Traders Fail", script: "They change systems weekly.", caption: "Pick one. Master it. Eat. #ConsistencyWins", youtube: "Deep dive: system hopping vs committed growth." },
+  { day: "Tuesday", type: "Skit", title: "When the Market Misses TP By 1 Pip", script: "Me: It’s gonna go. Market: Goes other way.", caption: "TP trauma is real 😭 #OnePipAway", youtube: "Mini skit: 3 variations of this pain." },
+  { day: "Wednesday", type: "Reel", title: "Backtesting vs Forward Testing", script: "What you learn from each — and how I use both.", caption: "Test smarter 💡 #DataDriven", youtube: "Backtest session + live example split screen." },
+  { day: "Thursday", type: "Reel", title: "How I Use Alerts to Stay Off Charts", script: "No more screen staring — just alerts + react.", caption: "Trade less. Win more. #AlertFlow", youtube: "Set alerts in TradingView + show results." },
+  { day: "Friday", type: "Skit", title: "Trader Talking to The Chart", script: "Me: Just go up bro. Market: sideways.", caption: "We’ve all been there 💬 #ChartTalk", youtube: "Skit: 5 types of trader emotional breakdowns." },
+  { day: "Saturday", type: "Reel", title: "How to Avoid Breakout Traps", script: "Wait for the retest — always.", caption: "Confirmation beats guessing 🔍 #BreakoutTrap", youtube: "Live example: breakout vs fakeout trade." },
+  { day: "Sunday", type: "YouTube", title: "Weekly Market Outlook & Setup Planning", script: "These are the zones I’ll be watching.", caption: "Plan ahead 🧭 #SundaySetup", youtube: "Zoom session replay: setup review and levels." },
+  { day: "Monday", type: "Reel", title: "The 80/20 Rule of Trading", script: "80% of my results come from 20% of my trades.", caption: "Focus on your A+ setups. #ParetoTrading", youtube: "How to filter noise and stay focused." },
+  { day: "Tuesday", type: "Skit", title: "Me After One Green Trade", script: "Buys Rolex on demo profits.", caption: "Demo wins don’t count 😂 #TraderDelusion", youtube: "Comedy skit: the overconfident rookie." },
+  { day: "Wednesday", type: "Reel", title: "What Trading Has Taught Me About Life", script: "Discipline, patience, and self-awareness.", caption: "Trading = personal growth machine 🌱", youtube: "Podcast: trading lessons that transfer to life." },
+  { day: "Thursday", type: "Reel", title: "How to Trade Ranges Effectively", script: "Entry at extremes, exit midrange.", caption: "Think in zones. Win in consolidation. #RangePlay", youtube: "Live range trading example: key setups." },
+  { day: "Friday", type: "Skit", title: "That Trader Friend Who Always Overlevers", script: "100 lot on a $100 account? Why not?", caption: "RIP risk management 💥 #LotSizeLunatic", youtube: "5 trader personalities in one skit." },
+  { day: "Saturday", type: "Reel", title: "The Real Reason You’re Overtrading", script: "You’re bored, not strategic.", caption: "Discipline = no forced setups #OvertraderHelp", youtube: "Mindset shift: boredom vs quality trades." },
+  { day: "Sunday", type: "YouTube", title: "Monthly Review & Goal Setting", script: "Here’s what I learned and where I’m focused.", caption: "Level up each month 🔄 #MonthlyReview", youtube: "End-of-month breakdown and target reset." },
+  { day: "Monday", type: "Reel", title: "The Power of One Setup", script: "I only trade this — and here’s why.", caption: "Simplicity = profitability 🧠 #OneSetupOnly", youtube: "My one setup, broken down on charts." },
+  { day: "Tuesday", type: "Skit", title: "When I Try to Be a Signal Provider", script: "My signal: Loss. Their entry: Win.", caption: "Why I don’t sell signals 😅 #SignalPain", youtube: "Mini skit: the problem with copying trades." },
+  { day: "Wednesday", type: "Reel", title: "Why I Use a Trading Checklist", script: "Checklist = fewer dumb trades.", caption: "Follow rules. Keep profits. #ChecklistTrader", youtube: "Live walk-through of my personal checklist." },
+  { day: "Thursday", type: "Reel", title: "How I Use Higher Timeframes", script: "HTF gives the story. LTF gives the sniper entry.", caption: "Top-down clarity 🔍 #HTFAnalysis", youtube: "Multi-timeframe analysis in action." },
+  { day: "Friday", type: "Skit", title: "When You Exit Too Early", script: "TP hit — then keeps going for 300 pips.", caption: "The pain of leaving profits 💸 #EarlyExit", youtube: "Comedy skit: the TP exit regret series." },
+  { day: "Saturday", type: "Reel", title: "Why I Don’t Trade Mondays", script: "Monday is for watching, not trading.", caption: "Let Monday show its hand. #NoTradeMonday", youtube: "Chart review: why Monday setups are tricky." },
+  { day: "Sunday", type: "YouTube", title: "Deep Dive: Trade Review & Lessons", script: "Let’s analyze 3 trades and pull out key takeaways.", caption: "Review → improve 📈 #TradeLessons", youtube: "Detailed trade breakdown with psychology focus." },
+  { day: "Tuesday", type: "Skit", title: "Trader When Price Hits SL by 0.1 Pip", script: "*violently throws mouse*\nMe: 'That was planned.'", caption: "Too real 😤 #SLPain", youtube: "Skit series: small losses that ruin your day." }
 ];
 
 const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
