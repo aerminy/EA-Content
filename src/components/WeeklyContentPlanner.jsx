@@ -10,7 +10,7 @@ const sampleIdeas = [
     day: "Tuesday",
     type: "Skit",
     title: "Trader When Price Hits SL by 0.1 Pip",
-    script: "*violently throws mouse*\\nMe: ‘That was planned.’",
+    script: "*violently throws mouse*\\nMe: That was planned.",
     caption: "Too real 😤 #SLPain",
     youtube: "Skit series: small losses that ruin your day."
   }
