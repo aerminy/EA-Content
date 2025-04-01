@@ -34,8 +34,6 @@ const sampleIdeas = [
   { day: "Friday", type: "Skit", title: "When You Exit Too Early", script: "TP hit — then keeps going for 300 pips.", caption: "The pain of leaving profits 💸 #EarlyExit", youtube: "Comedy skit: the TP exit regret series." },
   { day: "Saturday", type: "Reel", title: "Why I Don’t Trade Mondays", script: "Monday is for watching, not trading.", caption: "Let Monday show its hand. #NoTradeMonday", youtube: "Chart review: why Monday setups are tricky." },
   { day: "Sunday", type: "YouTube", title: "Deep Dive: Trade Review & Lessons", script: "Let’s analyze 3 trades and pull out key takeaways.", caption: "Review → improve 📈 #TradeLessons", youtube: "Detailed trade breakdown with psychology focus." },
-  { day: "Tuesday", type: "Skit", title: "Trader When Price Hits SL by 0.1 Pip", script: "*violently throws mouse*
-Me: 'That was planned.'", caption: "Too real 😤 #SLPain", youtube: "Skit series: small losses that ruin your day." }
 ];
 
 const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
