@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import { Card, CardContent } from "./components/ui/card";
-import { Button } from "./components/ui/button";
-import { Switch } from "./components/ui/switch";
-import { Checkbox } from "./components/ui/checkbox";
+import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { Switch } from "./ui/switch";
+import { Checkbox } from "./ui/checkbox";
 
 const sampleIdeas = [
   // ...same sample ideas as before
