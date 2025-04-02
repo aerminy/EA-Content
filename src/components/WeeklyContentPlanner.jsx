@@ -63,26 +63,19 @@ useEffect(() => {
   shuffleIdeas(); // Auto-generate content when the app first loads
 }, []);
 
-  const shuffleIdeas = () => {
-    const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
-    const selected = [];
-    const usedDays = new Set();
+ const shuffleIdeas = () => {
+  const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
+  const selected = shuffled.slice(0, 7); // Always select 7 ideas
 
-    for (let idea of shuffled) {
-      if (!usedDays.has(idea.day) && selected.length < 7) {
-        usedDays.add(idea.day);
-        selected.push(idea);
-      }
-    }
+  const sorted = selected.sort(
+    (a, b) => dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day)
+  );
 
-    const sorted = selected.sort(
-      (a, b) => dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day)
-    );
+  setIdeas(sorted);
+  setUsedIdeas({});
+  setRatings({});
+};
 
-    setIdeas(sorted);
-    setUsedIdeas({});
-    setRatings({});
-  };
 
   const toggleUsed = (index) => {
     setUsedIdeas({ ...usedIdeas, [index]: !usedIdeas[index] });
