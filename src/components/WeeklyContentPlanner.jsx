@@ -88,7 +88,7 @@ const WeeklyContentPlanner = () => {
   };
 
   return (
-    <div className="p-4 space-y-4">
+    <div className="p-4 space-y-4 min-h-screen bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center">
       <h1 className="text-2xl font-bold">📆 EA Content Planner</h1>
       <div className="flex items-center gap-4">
         <Button onClick={shuffleIdeas}>🔄 Generate New Week</Button>
