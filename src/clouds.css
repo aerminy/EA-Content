@@ -20,6 +20,7 @@ body, html {
   height: 100%;
   animation: cloudScroll 60s linear infinite;
   opacity: 0.2;
+  z-index: 0;
 }
 
 @keyframes cloudScroll {
