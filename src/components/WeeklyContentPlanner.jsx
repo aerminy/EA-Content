@@ -3,6 +3,7 @@ import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Switch } from "./ui/switch";
 import { Checkbox } from "./ui/checkbox";
+import "./clouds.css";
 
 const sampleIdeas = [
     { day: "Monday", type: "Reel", title: "Best Risk Management Hack", script: "How I size my positions based on volatility.", caption: "Control your risk. Scale your edge. #RiskGame", youtube: "Live breakdown of a trade using volatility-based sizing." },
@@ -87,13 +88,13 @@ const WeeklyContentPlanner = () => {
     setRatings({ ...ratings, [index]: value });
   };
 
-  return (
-    <div className="p-4 space-y-4 min-h-screen bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center">
-      <h1 className="text-2xl font-bold">📆 EA Content Planner</h1>
+ return (
+    <div className="planner-wrapper p-4 space-y-4 min-h-screen">
+      <h1 className="text-2xl font-bold text-white drop-shadow">📆 EA Content Planner</h1>
       <div className="flex items-center gap-4">
         <Button onClick={shuffleIdeas}>🔄 Generate New Week</Button>
         <div className="flex items-center gap-2">
-          <span>🎥 Show YouTube Ideas</span>
+          <span className="text-white">🎥 Show YouTube Ideas</span>
           <Switch checked={showYouTube} onCheckedChange={setShowYouTube} />
         </div>
       </div>
