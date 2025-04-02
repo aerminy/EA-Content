@@ -3,7 +3,6 @@ import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { Switch } from "./ui/switch";
 import { Checkbox } from "./ui/checkbox";
-import "./clouds.css";
 
 const sampleIdeas = [
     { day: "Monday", type: "Reel", title: "Best Risk Management Hack", script: "How I size my positions based on volatility.", caption: "Control your risk. Scale your edge. #RiskGame", youtube: "Live breakdown of a trade using volatility-based sizing." },
@@ -59,15 +58,26 @@ const WeeklyContentPlanner = () => {
     localStorage.setItem("ratings", JSON.stringify(ratings));
   }, [ratings]);
 
-useEffect(() => {
- const shuffleIdeas = () => {
-  const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, 7);
-  setIdeas(selected);
-  setUsedIdeas({});
-  setRatings({});
-};
+  const shuffleIdeas = () => {
+    const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
+    const selected = [];
+    const usedDays = new Set();
 
+    for (let idea of shuffled) {
+      if (!usedDays.has(idea.day) && selected.length < 7) {
+        usedDays.add(idea.day);
+        selected.push(idea);
+      }
+    }
+
+    const sorted = selected.sort(
+      (a, b) => dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day)
+    );
+
+    setIdeas(sorted);
+    setUsedIdeas({});
+    setRatings({});
+  };
 
   const toggleUsed = (index) => {
     setUsedIdeas({ ...usedIdeas, [index]: !usedIdeas[index] });
@@ -77,13 +87,13 @@ useEffect(() => {
     setRatings({ ...ratings, [index]: value });
   };
 
- return (
-    <div className="planner-wrapper p-4 space-y-4 min-h-screen">
-      <h1 className="text-2xl font-bold text-white drop-shadow">📆 EA Content Planner</h1>
+  return (
+    <div className="p-4 space-y-4">
+      <h1 className="text-2xl font-bold">📆 EA Content Planner</h1>
       <div className="flex items-center gap-4">
         <Button onClick={shuffleIdeas}>🔄 Generate New Week</Button>
         <div className="flex items-center gap-2">
-          <span className="text-white">🎥 Show YouTube Ideas</span>
+          <span>🎥 Show YouTube Ideas</span>
           <Switch checked={showYouTube} onCheckedChange={setShowYouTube} />
         </div>
       </div>
