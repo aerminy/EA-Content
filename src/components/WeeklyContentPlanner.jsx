@@ -59,6 +59,10 @@ const WeeklyContentPlanner = () => {
     localStorage.setItem("ratings", JSON.stringify(ratings));
   }, [ratings]);
 
+useEffect(() => {
+  shuffleIdeas(); // Auto-generate content when the app first loads
+}, []);
+
   const shuffleIdeas = () => {
     const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
     const selected = [];
