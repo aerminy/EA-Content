@@ -1,0 +1,29 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.planner-wrapper {
+  background: linear-gradient(to top, #87cefa, #f0f8ff);
+  overflow: hidden;
+  position: relative;
+}
+
+.planner-wrapper::before {
+  content: "";
+  background: url('https://www.transparenttextures.com/patterns/clouds.png');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  animation: cloudScroll 60s linear infinite;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+@keyframes cloudScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
