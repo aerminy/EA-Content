@@ -60,18 +60,10 @@ const WeeklyContentPlanner = () => {
   }, [ratings]);
 
 useEffect(() => {
-  shuffleIdeas(); // Auto-generate content when the app first loads
-}, []);
-
  const shuffleIdeas = () => {
   const shuffled = [...sampleIdeas].sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, 7); // Always select 7 ideas
-
-  const sorted = selected.sort(
-    (a, b) => dayOrder.indexOf(a.day) - dayOrder.indexOf(b.day)
-  );
-
-  setIdeas(sorted);
+  const selected = shuffled.slice(0, 7);
+  setIdeas(selected);
   setUsedIdeas({});
   setRatings({});
 };
